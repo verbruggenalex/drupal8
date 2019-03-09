@@ -1,12 +1,31 @@
+sudo: required
+#
+#cache:
+#  directories:
+#    - web
+#    - vendor
+
 language: php
+
+php:
+  - 7.2
+
+env:
+  DOCKER_COMPOSE_VERSION: 1.23.2
 
 services:
   - docker
 
 before_install:
-- docker pull verbral/php-c9:7.2-apache
-- docker run -d -p 127.0.0.1:80:80 verbral/php-c9:7.2-apache /bin/sh -c "composer install"
-- docker ps -a
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose up -d
+  - docker ps -a
+
+install:
+  - docker exec web composer install
 
 script:
-- composer info
+  - docker exec web composer info
