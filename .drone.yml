@@ -1,0 +1,64 @@
+# ==============================================================================
+# Pull request clone ===========================================================
+# ==============================================================================
+# Use plugin to checkout pull requests for caching issue:
+# https://github.com/drone/drone/issues/2390
+# ==============================================================================
+clone:
+  git:
+    image: plugins/git:next
+    environment:
+      - CI=drone
+
+# ==============================================================================
+# Workspace location.
+# ==============================================================================
+workspace:
+  base: /test
+  path: toolkit
+
+# ==============================================================================
+# Main services
+# ==============================================================================
+services:
+  web:
+    image: fpfis/php71-dev
+    environment:
+      - DOCUMENT_ROOT=/test/toolkit/web
+  mysql:
+    image: percona/percona-server:5.7
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=drupal
+  selenium:
+    image: selenium/standalone-chrome
+
+# ==============================================================================
+# Pipelines
+# ==============================================================================
+pipeline:
+
+  # ============================================================================
+  # Setup section:
+  # ============================================================================
+  setup:
+    image: fpfis/php71-dev
+    commands:
+      - composer install --ansi --no-suggest
+    volumes:
+      - /cache/${DRONE_REPO_NAME}:/cache
+
+  install:
+    image: fpfis/php71-dev
+    commands:
+      - ./vendor/bin/run dsi
+    volumes:
+      - /cache/${DRONE_REPO_NAME}:/cache
+
+  behat:
+    image: fpfis/php71-dev
+    commands:
+      - ./vendor/bin/run drupal:enable-all
+      - ./vendor/bin/run behat:run-drupal8
+    volumes:
+      - /cache/${DRONE_REPO_NAME}:/cache
