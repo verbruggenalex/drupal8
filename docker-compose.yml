@@ -1,54 +1,21 @@
 version: '3'
 services:
-# ==============================================================================
   web:
-    image: verbral/php-c9:7.2-apache
+    image: fpfis/php71-dev
     environment:
-      APACHE_DOCUMENT_ROOT: ${PWD}/web
-      PHP_EXTENSION_BLACKFIRE: 1
-      PHP_EXTENSION_GD: 1
-      PHP_INI_ERROR_REPORTING: E_ALL
-      PHP_INI_MEMORY_LIMIT: 1g
-      WAKATIME_API_KEY: ${WAKATIME_API_KEY}
-      STARTUP_COMMAND_1: composer install
+      - DOCUMENT_ROOT=${PWD}/web
+    ports:
+      - 80:8080
+      - 443:8080
     working_dir: ${PWD}
     volumes:
       - ${PWD}:${PWD}
-      # - ~/.ssh:/home/web/.ssh
-      # - /var/run/docker.sock:/var/run/docker.sock
-    depends_on:
-      - mysql
-    ports:
-      - 81:80
-      - 8181:8181
-# ==============================================================================
   mysql:
-    image: mysql:5.7
+    image: percona/percona-server:5.7
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=drupal
-    volumes:
-      - mysql:/var/lib/mysql
-# ==============================================================================
   selenium:
     image: selenium/standalone-chrome
-# ==============================================================================
   # solr:
   #   image: fpfis/solr5
-# ==============================================================================
-#  backstop:
-#    image: backstopjs/backstopjs
-#    volumes:
-#      - ${PWD}/tests/backstop:/src
-#    user: 1000:1000
-# ==============================================================================
-#  blackfire:
-#    image: blackfire/blackfire
-#    environment:
-#        - BLACKFIRE_CLIENT_ID
-#        - BLACKFIRE_CLIENT_TOKEN
-#        - BLACKFIRE_SERVER_ID
-#        - BLACKFIRE_SERVER_TOKEN
-# ==============================================================================
-volumes:
-  mysql:
