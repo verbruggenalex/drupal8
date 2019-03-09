@@ -21,7 +21,7 @@ runner:
 drupal:
   root: "web"
   root_absolute: ~
-  base_url: "http://web:80"
+  base_url: "http://web:8080"
 
   # Basic Drupal site information.
   site:
