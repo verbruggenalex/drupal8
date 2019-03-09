@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains myproject_core.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function myproject_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the myproject_core module.
+    case 'help.page.myproject_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Myproject Core module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function myproject_core_theme() {
+  return [
+    'myproject_core' => [
+      'render element' => 'children',
+    ],
+  ];
+}

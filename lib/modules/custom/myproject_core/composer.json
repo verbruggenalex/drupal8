@@ -1,0 +1,7 @@
+{
+  "name": "custom/myproject_core",
+  "type": "drupal-custom-module",
+  "require": {
+    "drupal/views_bulk_operations": "^2.5"
+  }
+}

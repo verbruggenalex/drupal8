@@ -1,0 +1,7 @@
+name: 'Myproject Core'
+type: module
+description: 'Myproject Core module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - views_bulk_operations
