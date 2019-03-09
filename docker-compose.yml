@@ -14,8 +14,8 @@ services:
     working_dir: ${PWD}
     volumes:
       - ${PWD}:${PWD}
-      - ~/.ssh:/home/web/.ssh
-      - /var/run/docker.sock:/var/run/docker.sock
+      # - ~/.ssh:/home/web/.ssh
+      # - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - mysql
     ports:
@@ -33,8 +33,8 @@ services:
   selenium:
     image: selenium/standalone-chrome
 # ==============================================================================
-  solr:
-    image: fpfis/solr5
+  # solr:
+  #   image: fpfis/solr5
 # ==============================================================================
 #  backstop:
 #    image: backstopjs/backstopjs
