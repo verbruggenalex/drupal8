@@ -62,3 +62,4 @@ pipeline:
       - ./vendor/bin/run behat:run-drupal8
     volumes:
       - /cache/${DRONE_REPO_NAME}:/cache
+
