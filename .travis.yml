@@ -21,5 +21,6 @@ install:
   - docker-compose exec web composer install
 
 script:
-  - docker-compose exec web ./vendor/bin/run
   - docker-compose exec web ./vendor/bin/run dsi
+  - docker-compose exec web ./vendor/bin/run drupal:enable-all
+  - docker-compose exec web ./vendor/bin/run behat:run-drupal8
