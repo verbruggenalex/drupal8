@@ -45,21 +45,14 @@ pipeline:
     image: fpfis/php71-dev
     commands:
       - composer install --ansi --no-suggest
-    volumes:
-      - /cache/${DRONE_REPO_NAME}:/cache
 
   install:
     image: fpfis/php71-dev
     commands:
       - ./vendor/bin/run dsi
-    volumes:
-      - /cache/${DRONE_REPO_NAME}:/cache
 
   behat:
     image: fpfis/php71-dev
     commands:
       - ./vendor/bin/run drupal:enable-all
       - ./vendor/bin/run behat:run-drupal8
-    volumes:
-      - /cache/${DRONE_REPO_NAME}:/cache
-
