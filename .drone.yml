@@ -49,10 +49,10 @@ pipeline:
   install:
     image: fpfis/php71-dev
     commands:
-      - ./vendor/bin/run dsi
+      - ./vendor/bin/run dsi --ansi
 
   behat:
     image: fpfis/php71-dev
     commands:
-      - ./vendor/bin/run drupal:enable-all
-      - ./vendor/bin/run behat:run-drupal8
+      - ./vendor/bin/run drupal:enable-all --ansi
+      - ./vendor/bin/run behat:run-drupal8 --ansi
