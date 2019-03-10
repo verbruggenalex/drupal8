@@ -4,72 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "378700c10ea366f1e411efa6c852a9d4",
+    "content-hash": "6e46941c1135e959686ff46c662ed3b0",
     "packages": [
-        {
-            "name": "alchemy/zippy",
-            "version": "0.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/alchemy-fr/Zippy.git",
-                "reference": "5ffdc93de0af2770d396bf433d8b2667c77277ea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/alchemy-fr/Zippy/zipball/5ffdc93de0af2770d396bf433d8b2667c77277ea",
-                "reference": "5ffdc93de0af2770d396bf433d8b2667c77277ea",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/collections": "~1.0",
-                "ext-mbstring": "*",
-                "php": ">=5.5",
-                "symfony/filesystem": "^2.0.5|^3.0",
-                "symfony/process": "^2.1|^3.0"
-            },
-            "require-dev": {
-                "ext-zip": "*",
-                "guzzle/guzzle": "~3.0",
-                "guzzlehttp/guzzle": "^6.0",
-                "phpunit/phpunit": "^4.0|^5.0",
-                "symfony/finder": "^2.0.5|^3.0"
-            },
-            "suggest": {
-                "ext-zip": "To use the ZipExtensionAdapter",
-                "guzzle/guzzle": "To use the GuzzleTeleporter with Guzzle 3",
-                "guzzlehttp/guzzle": "To use the GuzzleTeleporter with Guzzle 6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Alchemy\\Zippy\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alchemy",
-                    "email": "dev.team@alchemy.fr",
-                    "homepage": "http://www.alchemy.fr/"
-                }
-            ],
-            "description": "Zippy, the archive manager companion",
-            "keywords": [
-                "bzip",
-                "compression",
-                "tar",
-                "zip"
-            ],
-            "time": "2016-11-03T16:10:31+00:00"
-        },
         {
             "name": "asm89/stack-cors",
             "version": "1.2.0",
@@ -2347,40 +2283,6 @@
                 "validator"
             ],
             "time": "2018-09-25T20:59:41+00:00"
-        },
-        {
-            "name": "europa/toolkit",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbruggenalex/europa-toolkit.git",
-                "reference": "ee20c283bf5f81f207200e2d72aa6a15ab939338"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbruggenalex/europa-toolkit/zipball/ee20c283bf5f81f207200e2d72aa6a15ab939338",
-                "reference": "ee20c283bf5f81f207200e2d72aa6a15ab939338",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.2",
-                "cweagans/composer-patches": "^1.6.5",
-                "drush/drush": "^9.0.0",
-                "openeuropa/task-runner": "^1.0@beta"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "EcEuropa\\Toolkit\\": "./src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "EUPL-1.1"
-            ],
-            "description": "NextEuropa Toolkit packaged for composer",
-            "homepage": "https://github.com/ec-europa/toolkit",
-            "time": "2019-03-10T14:37:41+00:00"
         },
         {
             "name": "gitonomy/gitlib",
@@ -5034,6 +4936,41 @@
             "time": "2019-03-01T17:43:52+00:00"
         },
         {
+            "name": "verbruggenalex/drupal-toolkit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbruggenalex/drupal-toolkit.git",
+                "reference": "062e39026f03e4ab90b1a2bfd932d1b7793d007f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbruggenalex/drupal-toolkit/zipball/062e39026f03e4ab90b1a2bfd932d1b7793d007f",
+                "reference": "062e39026f03e4ab90b1a2bfd932d1b7793d007f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2",
+                "cweagans/composer-patches": "^1.6.5",
+                "drupal-composer/drupal-scaffold": "^2.5",
+                "drush/drush": "^9.0.0",
+                "openeuropa/task-runner": "^1.0@beta"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VerbruggenAlex\\DrupalToolkit\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.1"
+            ],
+            "description": "Drupal Toolkit packaged for composer",
+            "homepage": "https://github.com/ec-europa/toolkit",
+            "time": "2019-03-10T19:34:59+00:00"
+        },
+        {
             "name": "webflo/drupal-finder",
             "version": "1.1.0",
             "source": {
@@ -5387,6 +5324,70 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "alchemy/zippy",
+            "version": "0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alchemy-fr/Zippy.git",
+                "reference": "5ffdc93de0af2770d396bf433d8b2667c77277ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alchemy-fr/Zippy/zipball/5ffdc93de0af2770d396bf433d8b2667c77277ea",
+                "reference": "5ffdc93de0af2770d396bf433d8b2667c77277ea",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": "~1.0",
+                "ext-mbstring": "*",
+                "php": ">=5.5",
+                "symfony/filesystem": "^2.0.5|^3.0",
+                "symfony/process": "^2.1|^3.0"
+            },
+            "require-dev": {
+                "ext-zip": "*",
+                "guzzle/guzzle": "~3.0",
+                "guzzlehttp/guzzle": "^6.0",
+                "phpunit/phpunit": "^4.0|^5.0",
+                "symfony/finder": "^2.0.5|^3.0"
+            },
+            "suggest": {
+                "ext-zip": "To use the ZipExtensionAdapter",
+                "guzzle/guzzle": "To use the GuzzleTeleporter with Guzzle 3",
+                "guzzlehttp/guzzle": "To use the GuzzleTeleporter with Guzzle 6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alchemy\\Zippy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alchemy",
+                    "email": "dev.team@alchemy.fr",
+                    "homepage": "http://www.alchemy.fr/"
+                }
+            ],
+            "description": "Zippy, the archive manager companion",
+            "keywords": [
+                "bzip",
+                "compression",
+                "tar",
+                "zip"
+            ],
+            "time": "2016-11-03T16:10:31+00:00"
+        },
         {
             "name": "behat/behat",
             "version": "v3.5.0",
@@ -9336,6 +9337,43 @@
             "time": "2017-04-07T12:08:54+00:00"
         },
         {
+            "name": "verbruggenalex/drupal-toolkit-dev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbruggenalex/drupal-toolkit-dev.git",
+                "reference": "feaffaccbc2712d20f3379cd59429f0f4361fe9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbruggenalex/drupal-toolkit-dev/zipball/feaffaccbc2712d20f3379cd59429f0f4361fe9c",
+                "reference": "feaffaccbc2712d20f3379cd59429f0f4361fe9c",
+                "shasum": ""
+            },
+            "require": {
+                "alchemy/zippy": "0.4.3",
+                "drupal/console": "^1.0.2",
+                "drupal/devel": "^2.0",
+                "drupal/drupal-extension": "^3.4",
+                "openeuropa/code-review": "^0.3.0",
+                "verbruggenalex/drupal8-behat": "dev-master",
+                "webflo/drupal-core-require-dev": "^8.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VerbruggenAlex\\DrupalToolkitDev\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.1"
+            ],
+            "description": "Drupal Toolkit Development packaged for composer",
+            "homepage": "https://github.com/verbruggenalex/drupal-toolkit-dev",
+            "time": "2019-03-10T19:56:46+00:00"
+        },
+        {
             "name": "verbruggenalex/drupal8-behat",
             "version": "dev-master",
             "source": {
@@ -9413,9 +9451,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "europa/toolkit": 20,
         "custom/myproject_core": 20,
-        "verbruggenalex/drupal8-behat": 20
+        "verbruggenalex/drupal-toolkit": 20,
+        "verbruggenalex/drupal-toolkit-dev": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
