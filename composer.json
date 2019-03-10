@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "verbruggenalex/drupal-toolkit-dev": "dev-master"
-    }
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
