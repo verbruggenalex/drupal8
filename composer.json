@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "alchemy/zippy": "0.4.3",
         "europa/toolkit": "dev-master",
         "custom/myproject_core": "dev-master",
         "drupal-composer/drupal-scaffold": "^2.5",
@@ -19,8 +20,9 @@
         "drupal/console": "^1.0.2",
         "drupal/devel": "^2.0",
         "drupal/drupal-extension": "^3.4",
-        "webflo/drupal-core-require-dev": "^8.6.0",
-        "verbruggenalex/drupal8-behat": "dev-master"
+        "openeuropa/code-review": "^0.3.0",
+        "verbruggenalex/drupal8-behat": "dev-master",
+        "webflo/drupal-core-require-dev": "^8.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -37,6 +39,8 @@
         "post-update-cmd": []
     },
     "extra": {
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
         },

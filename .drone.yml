@@ -46,6 +46,11 @@ pipeline:
     commands:
       - composer install --ansi --no-suggest
 
+  code-review:
+    image: fpfis/php71-dev
+    commands:
+      - ./vendor/bin/grumphp run --ansi
+
   install:
     image: fpfis/php71-dev
     commands:

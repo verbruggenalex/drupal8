@@ -21,6 +21,7 @@ install:
   - docker-compose exec web composer install --no-suggest
 
 script:
+  - docker-compose exec web ./vendor/bin/grumphp run
   - docker-compose exec web ./vendor/bin/run dsi
   - docker-compose exec web ./vendor/bin/run drupal:enable-all
   - docker-compose exec web ./vendor/bin/run behat:run-drupal8 || docker-compose exec web cat vendor/verbruggenalex/drupal8-behat/behat.yml
